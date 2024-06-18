@@ -58,8 +58,11 @@ Edit an Account
     ClickText          tara siri Insurance45
     ClickText          Details
     ClickText          Edit Annual Revenue
-    ${AnnulaAmt}=      GetInputValue                     Annual Revenue+'100'
-    log                ${AnnulaAmt}
+    ${AnnulaAmt}=      GetInputValue                     Annual Revenue
+    ${conannuamt}      Convert To Number                 ${AnnulaAmt}+100 
     Log To Console     ${AnnulaAmt}
+    Log To Console     ${conannuamt}
+    log                ${AnnulaAmt}
+    Log                ${conannuamt}    
     #TypeText           Annual Revenue              ${AnnulaAmt}+100
     #ClickText          Save                        anchor=Account Owner
