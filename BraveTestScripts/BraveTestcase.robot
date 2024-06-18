@@ -67,7 +67,7 @@ Edit an Account
     ${addingamt}=      Set Variable                ${10000.80}
     #${AfterSum}=      Evaluate                    ${conannamt}+${addingamt}
     #${Afterminus}=    Evaluate                    ${conannamt}-${addingamt}
-    ${AfterSum}=       Set Variable                ${${conannamt}+${addingamt})
+    ${AfterSum}=       Set Variable                ${${conannamt}+${addingamt}}
     ${Afterminus}=     Set Variable                $(${conannamt}-${addingamt}}
     Log To Console     ${AfterSum}
     Log To Console     ${Afterminus}
