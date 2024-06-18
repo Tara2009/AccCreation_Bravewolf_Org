@@ -56,6 +56,6 @@ Edit an Account
     ClickText          tara siri Insurance45
     ClickText          Details
     ClickText          Edit Annual Revenue
-    ${AnnulaAmt}=      GetText                     Annual Revenue
+    ${AnnulaAmt}=      GetInputValue                     Annual Revenue
     TypeText           Annual Revenue              ${AnnulaAmt}+100
     ClickText          Save                        anchor=Account Owner
