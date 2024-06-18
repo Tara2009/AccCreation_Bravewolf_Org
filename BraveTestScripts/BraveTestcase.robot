@@ -62,7 +62,7 @@ Edit an Account
     Log To Console     ${AnnulaAmt}
     #${conannuamt}     Convert To Number           ${AnnulaAmt}+100
     ${conannamt}=      Set Variable                ${AnnulaAmt}
-    ${addingamt}=      Set Variable                ${100}
+    ${addingamt}=      Set Variable                ${1000}
     ${AfterSum}=       Evaluate                    ${conannamt}+${addingamt}
     ${Afterminus}=     Evaluate                    ${conannamt}-${addingamt}
     Log To Console     ${AfterSum}
