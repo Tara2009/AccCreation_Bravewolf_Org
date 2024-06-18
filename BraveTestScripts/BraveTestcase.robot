@@ -69,6 +69,7 @@ Edit an Account
     Log To Console     ${Afterminus}
     log                ${AfterSum}
     Log                ${Afterminus}
-    #Log               ${conannuamt}
-    #TypeText          Annual Revenue              ${AnnulaAmt}+100
-    #ClickText         Save                        anchor=Account Owner
+    TypeText          Annual Revenue               ${AfterSum}
+    ClickText         Save                        anchor=Account Owner
+    ClickText         Accounts
+    Sleep             2s
