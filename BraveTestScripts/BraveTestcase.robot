@@ -45,7 +45,7 @@ Account Creation
 
     # End Account creation test case
 
-   
+
 Edit an Account
     [Tags]             EdAcct
     [Documentation]    Edit annual income field by storing the value in variable then add an amount to that existing amount.
@@ -58,15 +58,17 @@ Edit an Account
     ClickText          tara siri Insurance45
     ClickText          Details
     ClickText          Edit Annual Revenue
-    ${AnnulaAmt}=      GetInputValue                     Annual Revenue
+    ${AnnulaAmt}=      GetInputValue               Annual Revenue
     Log To Console     ${AnnulaAmt}
-    #${conannuamt}      Convert To Number                 ${AnnulaAmt}+100 
-    ${conannamt}=      Set Variable                      ${AnnulaAmt}
-    ${addingamt}=      Set Variable                      ${100}
-    ${AfterSum}=       Evaluate                        ${conannamt}+${addingamt}
+    #${conannuamt}     Convert To Number           ${AnnulaAmt}+100
+    ${conannamt}=      Set Variable                ${AnnulaAmt}
+    ${addingamt}=      Set Variable                ${100}
+    ${AfterSum}=       Evaluate                    ${conannamt}+${addingamt}
+    ${Afterminus}=     Evaluate                    ${conannamt}-${addingamt}
     Log To Console     ${AfterSum}
-    #Log To Console     ${conannuamt}
+    Log To Console     ${Afterminus}
     log                ${AfterSum}
-    #Log                ${conannuamt}    
-    #TypeText           Annual Revenue              ${AnnulaAmt}+100
-    #ClickText          Save                        anchor=Account Owner
+    Log                ${Afterminus}
+    #Log               ${conannuamt}
+    #TypeText          Annual Revenue              ${AnnulaAmt}+100
+    #ClickText         Save                        anchor=Account Owner
