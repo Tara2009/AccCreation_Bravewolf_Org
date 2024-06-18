@@ -66,7 +66,7 @@ Edit an Account
     ${AfterSum}=       Evaluate                        ${conannamt}+${addingamt}
     Log To Console     ${AfterSum}
     #Log To Console     ${conannuamt}
-    log                ${AnnulaAmt}
+    log                ${AfterSum}
     #Log                ${conannuamt}    
     #TypeText           Annual Revenue              ${AnnulaAmt}+100
     #ClickText          Save                        anchor=Account Owner
