@@ -62,7 +62,7 @@ Edit an Account
     Log                ${AnnulaAmt}
     ${conannamt}=      Set Variable                ${AnnulaAmt}
     ${addingamt}=      Set Variable                ${10000}
-    ${AfterSum}=       Set Variable                ${${conannamt}+${addingamt}}
+    ${AfterSum}=       Set Variable                ${conannamt}+${addingamt}
     #${AnnulaAmt1}=     Convert To Number           ${AnnulaAmt}
     #Log                ${AnnulaAmt1}
     #${conannuamt}     Convert To Number           ${AnnulaAmt}+100
