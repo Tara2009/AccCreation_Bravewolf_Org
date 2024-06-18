@@ -59,7 +59,8 @@ Edit an Account
     ClickText          Details
     ClickText          Edit Annual Revenue
     ${AnnulaAmt}=      GetInputValue                     Annual Revenue
-    ${conannuamt}      Convert To Integer                 ${AnnulaAmt}+100 
+    Log To Console     ${AnnulaAmt}
+    ${conannuamt}      Convert To Number                 ${AnnulaAmt}+100 
     Log To Console     ${AnnulaAmt}
     Log To Console     ${conannuamt}
     log                ${AnnulaAmt}
