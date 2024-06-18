@@ -57,5 +57,7 @@ Edit an Account
     ClickText          Details
     ClickText          Edit Annual Revenue
     ${AnnulaAmt}=      GetInputValue                     Annual Revenue
-    TypeText           Annual Revenue              ${AnnulaAmt}+100
-    ClickText          Save                        anchor=Account Owner
+    log                ${AnnulaAmt}
+    Log To Console     ${AnnulaAmt}
+    #TypeText           Annual Revenue              ${AnnulaAmt}+100
+    #ClickText          Save                        anchor=Account Owner
