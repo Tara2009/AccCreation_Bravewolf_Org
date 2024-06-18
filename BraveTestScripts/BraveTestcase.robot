@@ -60,10 +60,13 @@ Edit an Account
     ClickText          Edit Annual Revenue
     ${AnnulaAmt}=      GetInputValue                     Annual Revenue
     Log To Console     ${AnnulaAmt}
-    ${conannuamt}      Convert To Number                 ${AnnulaAmt}+100 
-    Log To Console     ${AnnulaAmt}
-    Log To Console     ${conannuamt}
+    #${conannuamt}      Convert To Number                 ${AnnulaAmt}+100 
+    ${conannamt}=      Set Variable                      ${AnnulaAmt}
+    ${addingamt}=      Set Variable                      ${100}
+    ${AfterSum}=       Evaluate                        ${conannamt}+${addingamt}
+    Log To Console     ${AfterSum}
+    #Log To Console     ${conannuamt}
     log                ${AnnulaAmt}
-    Log                ${conannuamt}    
+    #Log                ${conannuamt}    
     #TypeText           Annual Revenue              ${AnnulaAmt}+100
     #ClickText          Save                        anchor=Account Owner
