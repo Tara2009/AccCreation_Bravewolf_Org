@@ -49,6 +49,8 @@ Account Creation
 Edit an Account
     [Tags]             EdAcct
     [Documentation]    Edit annual income field by storing the value in variable then add an amount to that existing amount.
+    Appstate           Home
+    LaunchApp          Sales
     ClickText          Accounts
     ClickText          Select a List View: Accounts
     ClickText          All Accounts
