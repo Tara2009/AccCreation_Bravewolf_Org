@@ -64,8 +64,8 @@ Edit an Account
     Log                ${totalamt}
     Log                ${conint}
     ${contotamt}       Evaluate                    ${conint}+10000
-    ${te1}            Remove String Using Regexp                              ${37,960.00}
-    ${te2}            Remove String               ${48,908.00}                ,
+    ${te1}             Remove String Using Regexp                              ${37,960.00}    ,
+    ${te2}             Remove String               ${48,908.00}                ,
     Log                ${te1}
     Log                ${te2}
     Log To Console     ${contotamt}
