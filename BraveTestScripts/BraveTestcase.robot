@@ -7,6 +7,8 @@ Resource               ../BraveResource/BraveCommon.robot
 Suite Setup            Setup Browser
 Suite Teardown         End suite
 
+*** Variables ***
+${comval}=    48,910.10
 
 *** Test Cases ***
 Account Creation
@@ -64,10 +66,13 @@ Edit an Account
     Log                ${totalamt}
     Log                ${conint}
     ${contotamt}       Evaluate                    ${conint}+10000
-    ${te1}             Remove String Using Regexp                              ${37,960.00}    ,
-    ${te2}             Remove String               ${48,908.00}                ,
-    Log                ${te1}
+    #${te1}             Remove String Using Regexp                              ${37,960.00}    ,
+    Log                ${comval}
+    ${te2}             Remove String               ${comval} ,
+    ${removecomm}      Evaluate                    ${te2}+10000
+    #Log                ${te1}
     Log                ${te2}
+    Log                ${removecomm}
     Log To Console     ${contotamt}
     Log                ${contotamt}
     TypeText           Annual Revenue              ${contotamt}
