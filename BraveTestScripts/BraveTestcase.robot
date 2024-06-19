@@ -88,3 +88,13 @@ Edit an Account
     #Log To Console    ${AfterSum}
     #log               ${AfterSum}
     # Log              ${Afterminus}
+Open Existing Record
+    [Tags]             testgen
+    [Documentation]    Open a record by clicking the record in the grid
+    Appstate           Home
+    LaunchApp          Sales
+    ClickText          Accounts
+    ClickText          Select a List View: Accounts
+    ClickText          All Accounts
+    UseTable           Account Name
+    ClickCell          r4/c?Account Name           tag=a
