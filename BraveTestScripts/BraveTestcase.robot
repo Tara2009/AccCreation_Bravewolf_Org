@@ -58,9 +58,13 @@ Edit an Account
     ClickText          tara siri Insurance45
     ClickText          Details
     ClickText          Edit Annual Revenue
-    
-
-    TypeText           Annual Revenue              ${AfterSum}
+    ${totalamt}=       GetInputValue               Annual Revenue
+    Log To Console     ${totalamt}
+    Log                ${totalamt}
+    ${contotamt}       Evaluate                    ${totalamt}+100
+    Log To Console     ${contotamt}
+    Log                ${contotamt}
+    TypeText           Annual Revenue              ${contotamt}
     ClickText          Save                        anchor=Account Owner
     ClickText          Accounts
     Sleep              2s
