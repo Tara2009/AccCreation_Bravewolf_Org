@@ -58,21 +58,24 @@ Edit an Account
     ClickText          tara siri Insurance45
     ClickText          Details
     ClickText          Edit Annual Revenue
-    ${AnnulaAmt}=      GetInputValue               Annual Revenue
-    Log                ${AnnulaAmt}
-    ${conannamt}=      Set Variable                ${AnnulaAmt}
-    ${addingamt}=      Set Variable                ${10000}
-    ${AfterSum}=       Set Variable                ${conannamt}+${addingamt}
-    #${AnnulaAmt1}=     Convert To Number           ${AnnulaAmt}
-    #Log                ${AnnulaAmt1}
-    #${conannuamt}     Convert To Number           ${AnnulaAmt}+100
-    #${AfterSum}=      Evaluate                    ${conannamt}+${addingamt}
-    #${Afterminus}=    Evaluate                    ${conannamt}-${addingamt}
-    #${Afterminus}=     Set Variable                ${conannamt}-${addingamt}
-    Log To Console     ${AfterSum}
-    log                ${AfterSum}
-   # Log                ${Afterminus}
+    
+
     TypeText           Annual Revenue              ${AfterSum}
     ClickText          Save                        anchor=Account Owner
     ClickText          Accounts
     Sleep              2s
+    #${AnnulaAmt}=      GetInputValue               Annual Revenue
+    #Log                ${AnnulaAmt}
+    #${conannamt}=      Set Variable                ${AnnulaAmt}
+    #${addingamt}=      Set Variable                ${10000}
+    #${AfterSum}=       Set Variable                ${conannamt}+${addingamt}
+    #${AnnulaAmt1}=    Convert To Number           ${AnnulaAmt}
+    #Log               ${AnnulaAmt1}
+    #${conannuamt}     Convert To Number           ${AnnulaAmt}+100
+    #${AfterSum}=      Evaluate                    ${conannamt}+${addingamt}
+    #${Afterminus}=    Evaluate                    ${conannamt}-${addingamt}
+    #${Afterminus}=    Set Variable                ${conannamt}-${addingamt}
+    #Log To Console     ${AfterSum}
+    #log                ${AfterSum}
+    # Log              ${Afterminus}
+    
