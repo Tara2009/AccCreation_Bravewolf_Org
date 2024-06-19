@@ -59,9 +59,11 @@ Edit an Account
     ClickText          Details
     ClickText          Edit Annual Revenue
     ${totalamt}=       GetInputValue               Annual Revenue
+    ${conint}=         Convert To Number           ${totalamt}
     Log To Console     ${totalamt}
     Log                ${totalamt}
-    ${contotamt}       Evaluate                    ${totalamt}+100
+    Log                ${conint}
+    ${contotamt}       Evaluate                    ${conint}+100
     Log To Console     ${contotamt}
     Log                ${contotamt}
     TypeText           Annual Revenue              ${contotamt}
