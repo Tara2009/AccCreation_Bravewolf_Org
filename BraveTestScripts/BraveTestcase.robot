@@ -57,7 +57,7 @@ Edit an Account
     TypeText           Search this list...         tara siri Insurance45\n
     ClickText          tara siri Insurance45
     ClickText          Details
-    ClickText          Edit Annual Revenue
+    #ClickText          Edit Annual Revenue
     ${AnnulaAmt}=      GetInputValue               Annual Revenue
     Log                ${AnnulaAmt}
     ${conannamt}=      Set Variable                ${AnnulaAmt}
