@@ -98,3 +98,4 @@ Open Existing Record
     ClickText          All Accounts
     UseTable           Account Name
     ClickCell          r4/c?Account Name           tag=a
+    Sleep              10s
