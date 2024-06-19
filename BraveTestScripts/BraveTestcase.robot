@@ -89,7 +89,7 @@ Edit an Account
     #log               ${AfterSum}
     # Log              ${Afterminus}
 Open Existing Record
-    [Tags]             testgen
+    [Tags]             OpenRcd
     [Documentation]    Open a record by clicking the record in the grid
     Appstate           Home
     LaunchApp          Sales
