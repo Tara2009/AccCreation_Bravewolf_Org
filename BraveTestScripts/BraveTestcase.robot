@@ -69,7 +69,7 @@ Edit an Account
     ${contotamt}       Evaluate                    ${conint}+10000
     #${te1}            Remove String Using Regexp                              ${37,960.00}    ,
     Log                ${comval}
-    ${te2}             Remove String               ${comval}                   ,
+    ${te2}             Remove String               ${comval}                   ,     
     ${removecomm}      Evaluate                    ${te2}+10000
     #Log               ${te1}
     Log                ${te2}
