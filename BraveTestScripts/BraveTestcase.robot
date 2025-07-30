@@ -9,7 +9,7 @@ Suite Setup            Setup Browser
 Suite Teardown         End suite
 
 *** Variables ***
-${comval}=             48,910.10
+${comval}=             49,910.10
 
 *** Test Cases ***
 Account Creation
